@@ -25,19 +25,19 @@ class Game
   end
 
   #NEED TO FINISH
-  def set_cpu_difficulty(cpu_player)
-    puts "Please set CPU difficulty.(1/2/3)"
+  def set_cpu_difficulty
+    puts "Please set CPU difficulty.(Easy/Medium/Nightmare)"
     loop do
-      choice = gets.chomp
-      if choice == "1"
-        #NEED TO FINISH
-        break
-      elsif choice == "2"
-        #NEED TO FINISH
-        break
-      elsif choice == "3"
-        #NEED TO FINISH
-        break
+      choice = gets.chomp.upcase
+      if choice == "EASY"
+        return 1
+      elsif choice == "MEDIUM"
+        # TO DO
+        puts "This difficulty is currently unavailable. It may be implemented one day, for now setting it to Easy."
+        return 1
+      elsif choice == "NIGHTMARE"
+        puts "This difficulty is currently unavailable. It may be implemented one day, for now setting it to Easy."
+        return 1
       end
     end
   end

@@ -13,6 +13,10 @@ while true
   Game.display_welcome_message
   player.set_role
 
+  unless player.is_human?
+    difficulty = game.set_cpu_difficulty
+  end
+
   player.is_human? ? Game.display_rules_for_guesser : Game.display_rules_for_master
 
   # Initializes and sets the secret code
@@ -27,7 +31,7 @@ while true
     if player.is_human?
       choice = game.prompt_for_choice
     else
-      choice = player.generate_cpu_choice
+      choice = player.generate_cpu_choice(difficulty)
       puts "The CPU chose #{choice}"
     end
 
