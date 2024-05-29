@@ -4,7 +4,7 @@ class Player
   attr_accessor :guesses, :human
 
   def initialize
-    @guesses = 2
+    @guesses = 12
     @human = false
   end
 
